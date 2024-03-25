@@ -23,7 +23,7 @@ main() {
 
 	while read -r line; do
 		mm_log "debug" "State changed: $line"
-		if echo "$line" | grep -q "'connected' --> 'disconnecting'"; then
+		if echo "$line" | grep -q "'connected' -->"; then
 			mm_log "info" "Disconnect detected"
 			disconnect_detected=1
 			break
